@@ -1,0 +1,552 @@
+/*
+Template Name       :   STM
+Template Author     :   Yousef Alaa
+Template Version    :   1.0
+My Email            :   yousefalaa11223344@gmail.com
+Date Created        :   31/1/2021
+Last Update         :   31/1/2021
+*/
+
+/*
+Import Google Fonts
+===================
+*/
+
+/*
+Main Rules
+==========
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:root {
+    --y-color: #ff4d79;
+}
+
+body {
+    font-family: sans-serif;
+    height: 10000px
+}
+
+.main-btn {
+    padding: 12px 40px;
+    background-color: var(--y-color);
+    border-radius: 25px;
+    color: #FFF;
+    text-transform: uppercase;
+    font-weight: bold;
+    box-shadow: 0 0 10px var(--y-color);
+}
+.main-btn:hover {box-shadow: 0 0 10px 4px var(--y-color);color: #FFF}
+.main-btn:focus {box-shadow: 0 0 10px var(--y-color) !important}
+
+.square-h {
+    font-weight: bold;
+    text-transform: capitalize;
+    color: #121212;
+    margin-bottom: 16px;
+    text-align: center
+}
+
+.square-h:before {
+    content: '[';
+    color: var(--y-color);
+    margin: 0 10px;
+    font-size: calc(1.65rem + .9vw);
+}
+
+.square-h:after {
+    content: ']';
+    color: var(--y-color);
+    margin: 0 10px;
+    font-size: calc(1.65rem + .9vw);
+}
+.square-h + p {color: #909090;text-align: center}
+
+
+/* Start Nav */
+nav {
+    background: transparent;
+    position: fixed !important;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    transition: .5s ease;
+}
+nav.active {
+    background-color: #ECF0F1;
+    box-shadow: 0 5px 12px #ccc;
+    opacity: .9;
+}
+
+.headroom--pinned {
+    top: 0;
+}
+.headroom--unpinned {
+    top: -85px;
+}
+
+nav .navbar-brand {color: var(--y-color);font-size: 28px;}
+nav .navbar-brand .icon {font-size: 38px}
+nav .navbar-brand .word span {font-weight: bold}
+
+nav .navbar-toggler {border: 2px solid var(--y-color);padding: 16px 9px;}
+
+nav .navbar-toggler:focus {box-shadow: none;}
+
+nav button.active span {background-color: transparent!important;}
+nav button.active span:before {top: 0 !important;transform: rotate(42deg);transition: .5s ease-in-out}
+nav button.active span:after {top: 0 !important;transform: rotate(-42deg);transition: .5s ease-in-out}
+
+nav .navbar-toggler .nav-icon {
+    width: 26px;
+    height: 3px;
+    display: block;
+    background-color: var(--y-color);
+    position: relative;
+    border-radius: 2px
+}
+nav .navbar-toggler .nav-icon:after {
+    content: "";
+    background-color: var(--y-color);
+    height: 3px;
+    display: block;
+    width: 26px;
+    position: absolute;
+    top: 8px;
+    border-radius: 2px
+}
+nav .navbar-toggler .nav-icon:before {
+    content: "";
+    background-color: var(--y-color);
+    height: 3px;
+    display: block;
+    width: 26px;
+    position: absolute;
+    top: -8px;
+    border-radius: 2px
+}
+
+nav .navbar-nav .nav-link {text-transform: uppercase;font-weight: bold;transition: .5s ease-in-out}
+nav .navbar-nav .nav-link:not(.active) {color: #FFF}
+nav.active .navbar-nav .nav-link:not(.active) {color: #777}
+
+nav .navbar-nav .nav-link:hover,
+nav .navbar-nav a.active {color: var(--y-color) !important;}
+
+
+@media (max-width: 991px) {
+    nav .navbar-nav {background-color: #ECF0F1;padding: 12px 35px 0;}
+    nav .navbar-nav .nav-item:not(:last-of-type) {border-bottom: 1px solid var(--y-color)}
+    nav .navbar-nav a.active {
+        color: #ccc !important;
+        -webkit-text-stroke-width: medium;
+        -webkit-text-stroke-color: var(--y-color);
+    }
+    nav .navbar-nav .nav-link:not(.active) {color: var(--y-color)}
+}
+
+/* Start Header */
+header {
+    background-image: url(../images/header.jpg);
+    background-size: cover;
+    height: 100vh;
+    
+}
+
+header .overlay {
+    background-color: rgba(0, 0, 0, .8);
+    height: 100%;
+    position: relative;
+    z-index: 1;
+    color: #FFF;
+    display: flex;
+    align-items: center;
+}
+
+header .overlay i {display: block;font-size: 45px;color: var(--y-color);margin-bottom: 35px;}
+header .overlay p:first-of-type {font-size: 18px;font-weight: bold;font-style: italic;margin-bottom: 23px;text-transform: capitalize}
+header .overlay h1 {font-weight: 700;font-size: 50px;text-transform: uppercase;}
+header .overlay p:last-of-type {width: 50%;margin: auto;}
+header .overlay button {margin-top: 24px;}
+
+header .count {
+    width: 70%;
+    height: 110px;
+    padding: 0 90px;
+    border-radius: 10px;
+    background-color: var(--y-color);
+    position: absolute;
+    left: 15%;
+    bottom: -55px;
+    z-index: 2;
+}
+
+header .count div {text-align: center;}
+header .count .dot {line-height: 110px;font-size: 59px;font-weight: bold;}
+header .count span {font-weight: bold;font-size: 50px;display: block;margin-bottom: -15px;margin-top: 7px;}
+header .count b {font-weight: bold;font-size: 22px;display: block;}
+
+@media (max-width: 990px) {
+    header .count {padding: 0 30px}
+}
+
+@media (max-width: 850px) {
+    header .count {width: 90%;left: 5%}
+}
+
+@media (max-width: 650px) {
+    header .count span {font-size: 35px;margin-bottom: -5px;margin-top: 19px}
+    header .count b {font-size: 18px;}
+    header .count .dot {font-size: 40px;}
+}
+
+@media (max-width: 450px) {
+    header .overlay p:last-of-type {width: 95%}
+}
+
+@media (max-width: 535px) {
+    header .count {padding: 0 25px 0 5px}
+    header .count .row {justify-content: space-around;}
+    header .count .dot {padding: 0;max-width: 20px;}
+}
+
+@media (max-width: 480px) {
+    header .count {height: 70px;bottom: -35px;}
+    header .count span {font-size: 25px;margin-top: 6px}
+    header .count b {font-size: 12px;}
+    header .count .dot {font-size: 40px;line-height: 70px}
+}
+
+@media (max-width: 400px) {
+    header .overlay p:first-of-type {font-size: 13px;}
+}
+
+@media (max-width: 350px) {
+    header .count span {font-size: 20px;margin-top: 18px}
+    header .count b {font-size: 7px;}
+    header .count .dot {font-size: 25px;}
+}
+
+@media (max-width: 290px) {
+    header .count {padding: 0 35px 0 5px}
+    header .count span {font-size: 18px;margin-top: 12px}
+}
+
+/* Start About */
+.about {padding-top: 100px;padding-bottom: 55px}
+
+.about .row > div {margin-bottom: 30px}
+
+.about h2 {font-size: 35px;font-weight: bold;text-transform: capitalize;color: #121212;}
+.about h2 + p {color: #909090;line-height: 1.5;font-size: 14px;}
+.about .marks p {color: #909090;margin-bottom: 9px;text-transform: capitalize;}
+.about .marks p span {color: var(--y-color);margin-right: 5px}
+.about button {padding: 12px 24px;font-size: 15px;margin-top: 13px;}
+
+@media (max-width: 349px) {
+    .about .marks p {font-size: 13px}
+}
+
+@media (max-width: 320px) {
+    .about button {padding: 10px 13px;font-size: 12px;}
+}
+
+@media (max-width: 300px) {
+    .about h2 {font-size: 26px}
+}
+
+/* Start Video */
+.video {
+    width: 100%;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+}
+.video video {width: 100%;z-index: 1}
+.video .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--y-color);
+    opacity: .55;
+    z-index: 2
+}
+.video .icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.video .icon span {color: #FFF;font-size: 75px;cursor: pointer;}
+
+/* Why Join */
+.why-join {position: relative;padding-top: 155px}
+.why-join .box-abs {
+    background: #FFF;
+    width: 80%;
+    height: 150px;
+    position: absolute;
+    top: -75px;
+    left: 10%;
+    border-radius: 10px;
+    z-index: 5;
+    padding-top: 20px;
+    box-shadow: 0px -10px 19px -1px #fff,
+                0px 10px 19px -6px #000;
+}
+
+.why-join .box-abs section {}
+.why-join .box-abs section:first-of-type {margin-left: 10px;}
+.why-join .box-abs section i {
+    color: var(--y-color);
+    display: block;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 13px;
+}
+.why-join .box-abs section h5 {font-weight: bold;color: #555;font-size: 18px}
+.why-join .box-abs section p {color: #909090;font-size: 14px}
+
+
+@media (max-width: 767px ) {
+    .why-join .box-abs {padding-top: 32px}
+    .why-join .box-abs section i {font-size: 24px;margin-bottom: 10px;}
+    .why-join .box-abs section h5 {font-size: 13px}
+    .why-join .box-abs section p {font-size: 11px}
+}
+
+@media (max-width: 493px) {
+    .why-join .box-abs {
+        width: 95%;
+        left: 2.5%;
+        opacity: .9;
+        height: 100px;
+        padding-top: 10px;
+        top: -50px;
+    }
+    .why-join .box-abs .row {margin: 0 }
+    .why-join .box-abs section {padding: 0 }
+}
+
+@media (max-width: 405px) {
+        .why-join .box-abs section i {font-size: 19px;}
+        .why-join .box-abs section h5 {font-size: 11px}
+        .why-join .box-abs section p {font-size: 5px}
+}
+
+@media (max-width: 340px) {
+    .why-join .box-abs {height: 90px;padding-top: 5px;top: -30px;}
+}
+
+
+.why-join .boxs {margin-top: 45px}
+.why-join .boxs .box div {
+    box-shadow: 0 0 6px 1px #ccc;
+    border-radius: 10px;
+    margin-bottom: 35px;
+    padding: 45px 0 45px 45px;
+    overflow: hidden;
+    position: relative
+}
+.why-join .boxs .box h3 {font-weight: bold;text-transform: capitalize}
+.why-join .boxs .box p {}
+.why-join .boxs .box .number {
+    display: flex;
+    background-color: var(--y-color);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    right: -40px;
+    padding-top: 22px;
+    padding-left: 22px;
+    bottom: -40px;
+    color: #FFF;
+}
+
+.why-join .boxs .box .icon {
+    font-size: 48px;
+    position: absolute;
+    top: -3px;
+    left: -10px;
+    color: #bababa;
+    transition: .5s ease-in-out
+}
+
+.why-join .boxs .box div:hover .icon {color: var(--y-color)}
+
+
+.count-to {background-image: url(../images/countdown.jpg);background-size: cover;height: 260px}
+.count-to .overlay {
+    background-color: rgba(0, 0, 0, .8);
+    height: 100%;
+    color: #FFF;
+    display: flex;
+    align-items: center;
+}
+.count-to .overlay .container {padding-top: 25px;}
+.count-to .overlay section {margin-bottom: 25px;}
+.count-to .overlay section div {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    padding: 10px 0 10px 50px;
+    position: relative
+}
+.count-to .overlay section div .icon {
+    position: absolute;
+    background-image: linear-gradient(0deg, #FF4D79 0, #FF809F 100%);
+    display: flex;
+    width: 44px;
+    height: 44px;
+    border-radius: 5px 0% 50%;
+    left: 0;
+    top: 0;
+    font-size: 27px;
+    justify-content: center;
+    align-items: center;
+}
+.count-to .overlay section div .num {font-size: 55px;font-weight: bold;margin-bottom: 0;margin-top: 15px;}
+.count-to .overlay section div .word {font-size: 15px;margin-top: -8px;}
+
+@media (max-width: 767px) {
+    .count-to {height: 400px}
+}
+
+@media (max-width: 575px) {
+    .count-to {height: 720px}
+}
+
+/* Start Schedules */
+.schedules {padding: 65px 0}
+
+.schedules .events {padding: 30px 0}
+
+.schedules .events .toggle-box {width: 16%}
+.schedules .events .active article:after {
+    content: '';
+    border-width: 15px;
+    border-style: solid;
+    border-color: transparent;
+    border-top-color: var(--y-color);
+    position: absolute;
+    bottom: -29px;
+    left: calc(50% - 15px);
+}
+.schedules .events .toggle article {
+    background-color: #FFF;
+    padding: 20px;
+    cursor: pointer;
+    position: relative;
+    transition: 1s ease-in-out;
+    box-shadow: 0 10px 30px #e2e8ed;
+    border-radius: 5px;
+}
+.schedules .events .active article,
+.schedules .events .toggle article:hover {background-image: linear-gradient(65deg, #FF4D79 0, #FF809F 100%);color: #FFF;}
+
+.schedules .events .toggle article h5 {color: #2f323c;text-transform: uppercase;font-weight: bold;}
+.schedules .events .toggle article:hover h5,
+.schedules .events .active article h5 {color: #FFF}
+
+.schedules .events .toggle article p {color: #848484;margin: 0;text-transform: capitalize;font-size: 14px;}
+.schedules .events .toggle article:hover p,
+.schedules .events .active article p {color: #FFF}
+
+/* Start Accordion */
+.schedules .my-accordion {margin-top: 70px}
+.schedules .my-accordion article {box-shadow: 0 0 20px 6px #eae4e4}
+.schedules .my-accordion article:not(:first-of-type) {display: none}
+.schedules .my-accordion article > div {
+    margin: 0;
+    color: #FFF;
+    border-bottom: 1px dashed #e5e5e5;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.schedules .my-accordion article .side1 {
+    float: left;
+    width: 18%;
+    background: linear-gradient(65deg, #FF4D79 0, #FF809F 100%);
+    padding: 35px 0 35px 24px;
+    font-size: 19px;
+    font-weight: bold;
+}
+.schedules .my-accordion article .side2 {
+    float: left;
+    width: 82%;
+    padding: 28px 0 28px 10px;
+    display: flex;
+    align-items: center;
+    background-color: #f7f7f7
+}
+
+.schedules .my-accordion article .side2 img {
+    width: 70px;
+    border-radius: 50%;
+    display: block;
+    margin-right: 20px;
+}
+.schedules .my-accordion article .side2 p {margin-bottom: 20px}
+.schedules .my-accordion article .side2 p span:first-of-type {
+    color: #212121;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: block;
+    font-size: 1.09rem;
+}
+.schedules .my-accordion article .side2 p span:last-of-type {
+    color: #777;
+    text-transform: capitalize
+}
+
+
+.schedules .my-accordion article section {background-color: #f3f4f3;padding: 20px 35px;}
+.schedules .my-accordion article section:not(:first-of-type) {display: none}
+
+.schedules .my-accordion article section p:first-of-type {font-size: 14px;line-height: 1.9;color: #212121}
+.schedules .my-accordion article section p:last-of-type {color: #777;font-size: 14px;}
+.schedules .my-accordion article section p span {color: var(--y-color);}
+/* End Accordion */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
