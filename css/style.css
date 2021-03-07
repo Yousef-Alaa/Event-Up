@@ -26,6 +26,7 @@ Main Rules
 
 :root {
     --y-color: #ff4d79;
+    --mPad: 65px;
 }
 
 body {
@@ -68,6 +69,17 @@ body {
 }
 .square-h + p {color: #909090;text-align: center}
 
+.p-size {
+    width: 60%;margin: 15px auto 50px;
+}
+
+@media (max-width: 991px) {
+    .p-size {width: 80%;}
+}
+
+@media (max-width: 550px) {
+    .p-size {width: 95%;}
+}
 
 /* Start Nav */
 nav {
@@ -133,23 +145,30 @@ nav .navbar-toggler .nav-icon:before {
     border-radius: 2px
 }
 
-nav .navbar-nav .nav-link {text-transform: uppercase;font-weight: bold;transition: .5s ease-in-out}
-nav .navbar-nav .nav-link:not(.active) {color: #FFF}
-nav.active .navbar-nav .nav-link:not(.active) {color: #777}
+nav .navbar-nav .nav-item {text-transform: uppercase;font-weight: bold;transition: .5s ease-in-out;cursor: pointer}
+nav .navbar-nav .nav-item:not(.active) {color: #FFF}
+nav.active .navbar-nav .nav-item:not(.active) {color: #777}
 
-nav .navbar-nav .nav-link:hover,
-nav .navbar-nav a.active {color: var(--y-color) !important;}
+nav .navbar-nav .nav-item:hover,
+nav .navbar-nav li.active {color: var(--y-color) !important;}
+
+@media (min-width: 992px) {
+    nav .navbar-nav .nav-item {margin-left: 13px}
+}
+
 
 
 @media (max-width: 991px) {
     nav .navbar-nav {background-color: #ECF0F1;padding: 12px 35px 0;}
     nav .navbar-nav .nav-item:not(:last-of-type) {border-bottom: 1px solid var(--y-color)}
-    nav .navbar-nav a.active {
+    nav .navbar-nav .nav-item:first-of-type {margin-top: 10px}
+    nav .navbar-nav .nav-item {margin-bottom: 7px;padding-bottom: 6px;}
+    nav .navbar-nav li.active {
         color: #ccc !important;
         -webkit-text-stroke-width: medium;
         -webkit-text-stroke-color: var(--y-color);
     }
-    nav .navbar-nav .nav-link:not(.active) {color: var(--y-color)}
+    nav .navbar-nav .nav-item:not(.active) {color: #777}
 }
 
 /* Start Header */
@@ -309,7 +328,6 @@ header .count b {font-weight: bold;font-size: 22px;display: block;}
                 0px 10px 19px -6px #000;
 }
 
-.why-join .box-abs section {}
 .why-join .box-abs section:first-of-type {margin-left: 10px;}
 .why-join .box-abs section i {
     color: var(--y-color);
@@ -363,7 +381,6 @@ header .count b {font-weight: bold;font-size: 22px;display: block;}
     position: relative
 }
 .why-join .boxs .box h3 {font-weight: bold;text-transform: capitalize}
-.why-join .boxs .box p {}
 .why-join .boxs .box .number {
     display: flex;
     background-color: var(--y-color);
@@ -431,7 +448,7 @@ header .count b {font-weight: bold;font-size: 22px;display: block;}
 }
 
 /* Start Schedules */
-.schedules {padding: 65px 0}
+.schedules {padding-top: var(--mPad);padding-bottom: var(--mPad);background-color: #f3f4f3}
 
 .schedules .events {padding: 30px 0}
 
@@ -480,7 +497,7 @@ header .count b {font-weight: bold;font-size: 22px;display: block;}
 
 .schedules .my-accordion article .side1 {
     float: left;
-    width: 18%;
+    width: 22%;
     background: linear-gradient(65deg, #FF4D79 0, #FF809F 100%);
     padding: 35px 0 35px 24px;
     font-size: 19px;
@@ -488,7 +505,7 @@ header .count b {font-weight: bold;font-size: 22px;display: block;}
 }
 .schedules .my-accordion article .side2 {
     float: left;
-    width: 82%;
+    width: 78%;
     padding: 28px 0 28px 10px;
     display: flex;
     align-items: center;
@@ -521,23 +538,285 @@ header .count b {font-weight: bold;font-size: 22px;display: block;}
 .schedules .my-accordion article section p:first-of-type {font-size: 14px;line-height: 1.9;color: #212121}
 .schedules .my-accordion article section p:last-of-type {color: #777;font-size: 14px;}
 .schedules .my-accordion article section p span {color: var(--y-color);}
+
+@media (max-width: 991px) {
+    .schedules .events .toggle-box {width: 24%;}
+    
+    .schedules .my-accordion article .side1 {padding: 39px 0 39px 13px;font-size: 16px;}
+}
+
+@media (max-width: 767px) {
+    .schedules .events .toggle article p {font-size: 11px}
+    .schedules .events .toggle article {padding: 15px}
+    .schedules .my-accordion article .side1 {padding: 40px 0 40px 13px;}
+}
+
+@media (max-width: 550px) {
+    .schedules .my-accordion article .side1 {width: 25%}
+    .schedules .my-accordion article .side2 {width: 75%}
+}
+
+@media (max-width: 524px) {
+    .schedules .events .toggle article h5 {font-size: 15px}
+}
+
+@media (max-width: 489px) {
+    .schedules .events .toggle article {padding: 8px 5px}
+}
+
+@media (max-width: 470px) {
+    .schedules .my-accordion article .side1 {font-size: 8px}
+    .schedules .my-accordion article .side2 {padding: 14px 0 14px 10px}
+    .schedules .my-accordion article section {padding: 8px}
+    .schedules .my-accordion article section p:first-of-type {font-size: 12px;line-height: 1.7;}
+    .schedules .my-accordion article section p:last-of-type {margin-bottom: 3px}
+    .schedules .my-accordion article .side2 p span:first-of-type {font-size: 13px}
+    .schedules .my-accordion article .side2 p span:last-of-type {font-size: 12px}
+}
+
+@media (max-width: 405px) {
+    .schedules .events .toggle article {padding: 6px 0}
+    .schedules .events .toggle article h5 {margin: 2px 0}
+}
+
+@media (max-width: 400px) {
+    .schedules .my-accordion article .side1 {display: none}
+    .schedules .my-accordion article .side2 {width: 100%;padding: 18px 0 18px 10px;}
+    .schedules .my-accordion article .side2 img {width: 50px;margin-right: 10px}
+    .schedules .my-accordion article .side2 p span:first-of-type {font-size: 10px}
+    .schedules .my-accordion article section p:last-of-type {font-size: 11px;font-weight: bold}
+}
+
+@media (max-width: 385px) {
+    .schedules .events .toggle-box {padding: 0 5px}
+    .schedules .events .toggle article h5 {font-size: 11px}
+    .schedules .events .toggle article p {font-size: 7px}
+}
+
+@media (max-width: 305px) {
+    .schedules .events .toggle-box {padding: 0 2px}
+}
+
+
+
+
 /* End Accordion */
 
+/* Start Our Speakers */
+.our-speakers {padding-top: var(--mPad);padding-bottom: var(--mPad);}
+.our-speakers .img-box {box-shadow: 0 8px 24px #e2e8ed;padding: 15px;margin-bottom: 30px;}
+.our-speakers .img-box .img-ov-con {position: relative;overflow: hidden;}
+.our-speakers .img-box .img-ov-con .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1;
+    top: -100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s ease-in-out;
+}
+
+.our-speakers .img-box:hover .overlay {top: 0;}
+
+.our-speakers .img-box .img-ov-con img {position: relative;z-index: 0;}
+
+.our-speakers .img-box .overlay .social {width: 54%;height: 50%;overflow: hidden;}
+.our-speakers .img-box .overlay .social a {
+    height: 50%;
+    color: #FFF;
+    width: 50%;
+    display: block;
+    margin: 0;
+    float: left;
+    text-align: center;
+}
+.our-speakers .img-box .overlay .social a:first-of-type {background-color: #1da1f2b3;}
+.our-speakers .img-box .overlay .social a:nth-of-type(2) {background-color: #ff4b68;}
+.our-speakers .img-box .overlay .social a:nth-of-type(3) {background-color: #2e4371;}
+.our-speakers .img-box .overlay .social a:last-of-type {background-color: #860a19;}
+
+.our-speakers .img-box h5 {
+    color: #212121;
+    text-align: center;
+    margin: 15px 0 3px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 17px;
+    transition: .5s ease-in-out;
+    opacity: .3;
+    cursor: pointer;
+}
+
+.our-speakers .img-box h5:hover {color: var(--y-color);opacity: 1;}
+
+.our-speakers .img-box p {
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 14px;
+    color: #888;
+    margin: 0;
+}
+
+.our-speakers button {
+    padding: 12px 17px;
+    font-size: 12px;
+    margin: 10px auto 0;
+    display: block;
+}
+
+@media (max-width: 420px) {
+    .our-speakers .row > div {width: 100%;}
+}
+
+/* End Our Speakers */
+
+/* Start Event Gallery */
+.event-gallery {padding-top: var(--mPad);padding-bottom: var(--mPad);background-color: #f3f4f3;}
+.event-gallery .img-box {
+    background-color: #FFF;
+    padding: 8px;
+    position: relative;
+}
+
+.event-gallery .img-box .overlay {
+    position: absolute;
+    background-color: var(--y-color);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: .5s ease-in-out;
+}
+
+.event-gallery .img-box:hover .overlay {opacity: .7;}
+
+.event-gallery .img-box .icon {
+    position: absolute;
+    color: var(--y-color);
+    background-color: #FFF;
+    border-radius: 50%;
+    font-size: 28px;
+    padding: 3.5px 14px;
+    top: calc(50% - 24.5px);
+    left: calc(50% - 24.5px);
+    transform: scale(0);
+    cursor: pointer;
+    transition: .5s .3s ease-in-out;
+}
+
+.event-gallery .img-box:hover .icon {transform: scale(1);}
+
+.event-gallery button {
+    padding: 12px 35px;
+    font-size: 12px;
+    margin: 35px auto 0;
+    display: block;
+}
+
+/* End Event Gallery */
+
+/* Start Upcoming Events */
+
+.coming-events {padding-top: var(--mPad);padding-bottom: var(--mPad);}
+.coming-events .content {position: relative;overflow: hidden;}
+.coming-events .overlay {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: .5s ease-in-out;
+    background-color: rgba(0, 0, 0, .75);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.coming-events .content:hover .overlay {top: 0;}
+
+.coming-events .overlay p {
+    color: #FFF;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.coming-events .overlay a,
+.coming-events .overlay a:hover {color: var(--y-color);cursor: pointer;}
+
+.coming-events button {
+    padding: 10.5px 22px;
+    font-size: 14px;
+    display: block;
+    margin: 35px auto;
+}
+
+/* End Upcoming Events */
+
+/* Start Upcoming Events */
+
+.ticket-pricing {padding-top: var(--mPad);padding-bottom: var(--mPad);background-color: #f8fafa;}
+
+.ticket-pricing .my-card {
+    box-shadow: 0 8px 24px #e2e8ed;
+    background-color: #FFF;
+    padding: 35px 0;
+    border-radius: 5px;
+}
+
+.ticket-pricing .my-card h5 {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #212121;
+    margin: 0;
+}
+
+.ticket-pricing .my-card p {
+    font-size: 37px;
+    font-weight: 700;
+    color: var(--y-color);
+    margin: 18px 0 0;
+}
+
+.ticket-pricing .my-card span {
+    text-transform: uppercase;
+    font-size: 12px;
+    margin-top: -2px;
+    margin-bottom: 22px;
+    display: block;
+}
+
+.ticket-pricing .my-card ul li {
+    margin-bottom: 17px;
+    color: #535353;
+}
+
+.ticket-pricing .my-card ul li i {
+    color: var(--y-color);
+    padding-right: 4px;
+}
+
+.ticket-pricing .my-card button {
+    padding: 10px 26px;
+    font-size: 14px;
+    margin-top: 15px;
+}
 
 
+.ticket-pricing .my-card.special {background-color: var(--y-color);}
 
+.ticket-pricing .my-card.special h5,
+.ticket-pricing .my-card.special p,
+.ticket-pricing .my-card.special span,
+.ticket-pricing .my-card.special ul li,
+.ticket-pricing .my-card.special ul li i {color: #fff;}
 
+.ticket-pricing .my-card.special button {background-color: #fff;color: #212121;box-shadow: 0 0 10px #fff;}
+.ticket-pricing .my-card.special button:hover {box-shadow: 0 0 10px 4px #fff;}
 
-
-
-
-
-
-
-
-
-
-
+/* End Upcoming Events */
 
 
 

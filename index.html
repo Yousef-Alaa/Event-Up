@@ -27,10 +27,12 @@
 </head>
 
 <body>
-    <!--<i class="fas fa-microphone"></i>
+    <!--
+        <i class="fas fa-microphone"></i>
         <i class="fal fa-microphone"></i>
-        <i class="fad fa-microphone"></i>-->
-
+        <i class="fad fa-microphone"></i>
+    -->
+    
     <!-- Start Nav -->
     <nav class="navbar navbar-expand-lg">
         <div class="container-lg">
@@ -41,33 +43,17 @@
             <button class="navbar-toggler un-active" type="button" data-bs-toggle="collapse" data-bs-target="#MyNav" aria-controls="MyNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="nav-icon"></span>
             </button>
-
+            
             <div class="collapse navbar-collapse" id="MyNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">about</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">schedules</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">speakers</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">gallery</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">pricing</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">sponsors</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">contact</a>
-                    </li>
+                    <li class="nav-item active" data-scroll="top">home</li>
+                    <li class="nav-item" data-scroll="#about">about</li>
+                    <li class="nav-item" data-scroll="#schedules">schedules</li>
+                    <li class="nav-item" data-scroll="#speakers">speakers</li>
+                    <li class="nav-item" data-scroll="#gallery">gallery</li>
+                    <li class="nav-item" data-scroll="#pricing">pricing</li>
+                    <li class="nav-item" data-scroll="#sponsors">sponsors</li>
+                    <li class="nav-item" data-scroll="#contact">contact</li>
                 </ul>
             </div>
         </div>
@@ -106,7 +92,7 @@
     </header>
 
     <!-- Start About -->
-    <div class="about container">
+    <div id="about" class="about nav-add-act container">
         <div class="row">
             <div class="col-md-6 col-12 text-center">
                 <img class="img-fluid" src="images/img1.png" alt="Image 1" />
@@ -239,28 +225,28 @@
                     <section class="col-md-3 col-sm-6 col-12">
                         <div>
                             <span class="icon"><i class="fal fa-microphone"></i></span>
-                            <p class="num" data-break='42'></p>
+                            <p class="num" data-break='42'>0</p>
                             <p class="word">Spekers</p>
                         </div>
                     </section>
                     <section class="col-md-3 col-sm-6 col-12">
                         <div>
                             <span class="icon"><i class="fal fa-lightbulb"></i></span>
-                            <p class="num" data-break='800'></p>
+                            <p class="num" data-break='172'>0</p>
                             <p class="word">Seats</p>
                         </div>
                     </section>
                     <section class="col-md-3 col-sm-6 col-12">
                         <div>
                             <span class="icon"><i class="fal fa-briefcase"></i></span>
-                            <p class="num" data-break='24'></p>
+                            <p class="num" data-break='24'>0</p>
                             <p class="word">Sponsors</p>
                         </div>
                     </section>
                     <section class="col-md-3 col-sm-6 col-12">
                         <div>
                             <span class="icon"><i class="fal fa-mug-hot"></i></span>
-                            <p class="num" data-break='56'></p>
+                            <p class="num" data-break='56'>0</p>
                             <p class="word">Sessions</p>
                         </div>
                     </section>
@@ -270,7 +256,7 @@
     </div>
 
     <!-- Start Schedules -->
-    <div class="schedules">
+    <div id="schedules" class="schedules nav-add-act">
         <div class="container">
             <h2 class="square-h">Event Schedules</h2>
             <p>
@@ -529,11 +515,371 @@
         </div><!-- container off -->
     </div><!-- schedules off -->
 
+    <!-- Start Our Speakers -->
+    <div class="our-speakers container">
+        <h2 class="square-h text-center">Our Speakers</h2>
+        <p class="text-center p-size">
+            Lorem ipsum dolor sit amet, in quodsi vulputate pro. Ius illum vocent mediocritatem an cule dicta iriure at phaedrum.
+        </p>
+
+        <div class="row justify-content-center">
+
+            <div class="col-6 col-md-4 col-xl-3">
+                <div class="img-box">
+                    <div class="img-ov-con">
+                        <div class="overlay">
+                            <div class="social">
+                                <a href="#"><i class="fab fa-twitter fa-lg"></i></a>
+                                <a href="#"><i class="fab fa-google fa-lg"></i></a>
+                                <a href="#"><i class="fab fa-facebook-f fa-lg"></i></a>
+                                <a href="#"><i class="fab fa-pinterest-p fa-lg"></i></a>
+                            </div>
+                        </div>
+                        <img src="images/team-01.jpg" class="img-fluid" alt="team">
+                    </div>
+                    <h5>jonathon doe</h5>
+                    <p>product designer, tesla</p>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-xl-3">
+                <div class="img-box">
+                    <div class="img-ov-con">
+                        <div class="overlay">
+                            <div class="social">
+                                <a href="#"><i class="fab fa-twitter fa-lg"></i></a>
+                                <a href="#"><i class="fab fa-google fa-lg"></i></a>
+                                <a href="#"><i class="fab fa-facebook-f fa-lg"></i></a>
+                                <a href="#"><i class="fab fa-pinterest-p fa-lg"></i></a>
+                            </div>
+                        </div>
+                        <img src="images/team-02.jpg" class="img-fluid" alt="team">
+                    </div>
+                    <h5>patric green</h5>
+                    <p>front-end developer</p>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-xl-3">
+                <div class="img-box">
+                    <div class="img-ov-con">
+                        <div class="overlay">
+                            <div class="social">
+                                <a href="#"><i class="fab fa-twitter fa-lg"></i></a>
+                                <a href="#"><i class="fab fa-google fa-lg"></i></a>
+                                <a href="#"><i class="fab fa-facebook-f fa-lg"></i></a>
+                                <a href="#"><i class="fab fa-pinterest-p fa-lg"></i></a>
+                            </div>
+                        </div>
+                        <img src="images/team-03.jpg" class="img-fluid" alt="team">
+                    </div>
+                    <h5>paul kowalsy</h5>
+                    <p>lead designer, tnw</p>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-xl-3">
+                <div class="img-box">
+                    <div class="img-ov-con">
+                        <div class="overlay">
+                            <div class="social">
+                                <a href="#"><i class="fab fa-twitter fa-lg"></i></a>
+                                <a href="#"><i class="fab fa-google fa-lg"></i></a>
+                                <a href="#"><i class="fab fa-facebook-f fa-lg"></i></a>
+                                <a href="#"><i class="fab fa-pinterest-p fa-lg"></i></a>
+                            </div>
+                        </div>
+                        <img src="images/team-04.jpg" class="img-fluid" alt="team">
+                    </div>
+                    <h5>jhon doe</h5>
+                    <p>back-end, asus</p>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-xl-3">
+                <div class="img-box">
+                    <div class="img-ov-con">
+                        <div class="overlay">
+                            <div class="social">
+                                <a href="#"><i class="fab fa-twitter fa-lg"></i></a>
+                                <a href="#"><i class="fab fa-google fa-lg"></i></a>
+                                <a href="#"><i class="fab fa-facebook-f fa-lg"></i></a>
+                                <a href="#"><i class="fab fa-pinterest-p fa-lg"></i></a>
+                            </div>
+                        </div>
+                        <img src="images/team-05.jpg" class="img-fluid" alt="team">
+                    </div>
+                    <h5>daryl dixon</h5>
+                    <p>full-stack, google</p>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-xl-3">
+                <div class="img-box">
+                    <div class="img-ov-con">
+                        <div class="overlay">
+                            <div class="social">
+                                <a href="#"><i class="fab fa-twitter fa-lg"></i></a>
+                                <a href="#"><i class="fab fa-google fa-lg"></i></a>
+                                <a href="#"><i class="fab fa-facebook-f fa-lg"></i></a>
+                                <a href="#"><i class="fab fa-pinterest-p fa-lg"></i></a>
+                            </div>
+                        </div>
+                        <img src="images/team-06.jpg" class="img-fluid" alt="team">
+                    </div>
+                    <h5>chris adams</h5>
+                    <p>ui designer, apple</p>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-xl-3">
+                <div class="img-box">
+                    <div class="img-ov-con">
+                        <div class="overlay">
+                            <div class="social">
+                                <a href="#"><i class="fab fa-twitter fa-lg"></i></a>
+                                <a href="#"><i class="fab fa-google fa-lg"></i></a>
+                                <a href="#"><i class="fab fa-facebook-f fa-lg"></i></a>
+                                <a href="#"><i class="fab fa-pinterest-p fa-lg"></i></a>
+                            </div>
+                        </div>
+                        <img src="images/team-07.jpg" class="img-fluid" alt="team">
+                    </div>
+                    <h5>paul kowalsy</h5>
+                    <p>lead designer, tnw</p>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-xl-3">
+                <div class="img-box">
+                    <div class="img-ov-con">
+                        <div class="overlay">
+                            <div class="social">
+                                <a href="#"><i class="fab fa-twitter fa-lg"></i></a>
+                                <a href="#"><i class="fab fa-google fa-lg"></i></a>
+                                <a href="#"><i class="fab fa-facebook-f fa-lg"></i></a>
+                                <a href="#"><i class="fab fa-pinterest-p fa-lg"></i></a>
+                            </div>
+                        </div>
+                        <img src="images/team-08.jpg" class="img-fluid" alt="team">
+                    </div>
+                    <h5>jhon doe</h5>
+                    <p>back-end, asus</p>
+                </div>
+            </div>
+
+        </div>
+        <button class="btn main-btn">meet with all speakers</button>
+    </div>
+
+    <!-- Start Event Gallery -->
+    <div class="event-gallery">
+        <div class="container">
+            <h2 class="square-h text-center">event gallery</h2>
+            <p class="text-center p-size">
+                Lorem ipsum dolor sit amet, in quodsi vulputate pro. Ius illum vocent mediocritatem an cule dicta iriure at phaedrum.
+            </p>
+            <div class="row justify-content-center">
+
+                <div class="col-6 col-md-4 col-xl-3">
+                    <div class="img-box">
+                        <div class="overlay"></div>
+                        <span class="icon"><i class="fal fa-plus"></i></span>
+                        <img src="images/img-1.jpg" class="img-fluid" alt="Gallery">
+                    </div>
+                </div>
+                
+                <div class="col-6 col-md-4 col-xl-3">
+                    <div class="img-box">
+                        <div class="overlay"></div>
+                        <span class="icon"><i class="fal fa-plus"></i></span>
+                        <img src="images/img-2.jpg" class="img-fluid" alt="Gallery">
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-xl-3">
+                    <div class="img-box">
+                        <div class="overlay"></div>
+                        <span class="icon"><i class="fal fa-plus"></i></span>
+                        <img src="images/img-3.jpg" class="img-fluid" alt="Gallery">
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-xl-3">
+                    <div class="img-box">
+                        <div class="overlay"></div>
+                        <span class="icon"><i class="fal fa-plus"></i></span>
+                        <img src="images/img-4.jpg" class="img-fluid" alt="Gallery">
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-xl-3">
+                    <div class="img-box">
+                        <div class="overlay"></div>
+                        <span class="icon"><i class="fal fa-plus"></i></span>
+                        <img src="images/img-5.jpg" class="img-fluid" alt="Gallery">
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-xl-3">
+                    <div class="img-box">
+                        <div class="overlay"></div>
+                        <span class="icon"><i class="fal fa-plus"></i></span>
+                        <img src="images/img-6.jpg" class="img-fluid" alt="Gallery">
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-xl-3">
+                    <div class="img-box">
+                        <div class="overlay"></div>
+                        <span class="icon"><i class="fal fa-plus"></i></span>
+                        <img src="images/img-7.jpg" class="img-fluid" alt="Gallery">
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-xl-3">
+                    <div class="img-box">
+                        <div class="overlay"></div>
+                        <span class="icon"><i class="fal fa-plus"></i></span>
+                        <img src="images/img-8.jpg" class="img-fluid" alt="Gallery">
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn main-btn">browse all</button>
 
 
+        </div>
 
+    </div>
 
+    <!-- Start Upcoming Events -->
+    <div class="coming-events container">
+        <h2 class="square-h text-center">event gallery</h2>
+        <p class="text-center p-size">
+            Lorem ipsum dolor sit amet, in quodsi vulputate pro. Ius illum vocent mediocritatem an cule dicta iriure at phaedrum.
+        </p>
+        <div class="row justify-content-center">
 
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="content">
+                    <div class="overlay text-center">
+                        <p>business confrence</p>
+                        <a>View details</a>
+                    </div>
+                    <img src="images/img1.jpg" class="img-fluid" alt="Com Img"/>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="content">
+                    <div class="overlay text-center">
+                        <p>designer confrence</p>
+                        <a>View details</a>
+                    </div>
+                    <img src="images/img2.jpg" class="img-fluid" alt="Com Img"/>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="content">
+                    <div class="overlay text-center">
+                        <p>marketer confrence</p>
+                        <a>View details</a>
+                    </div>
+                    <img src="images/img3.jpg" class="img-fluid" alt="Com Img"/>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="content">
+                    <div class="overlay text-center">
+                        <p>js confrence</p>
+                        <a>View details</a>
+                    </div>
+                    <img src="images/img4.jpg" class="img-fluid" alt="Com Img"/>
+                </div>
+            </div>
+
+        </div>
+
+        <button class="btn main-btn">more events</button>
+
+    </div>
+
+    <div class="ticket-pricing">
+        <div class="container">
+            <h2 class="square-h text-center">ticket pricing</h2>
+            <p class="text-center p-size">
+                Lorem ipsum dolor sit amet, in quodsi vulputate pro. Ius illum vocent mediocritatem an cule dicta iriure at phaedrum.
+            </p>
+    <!-- 
+
+    fal fa-times
+
+    fal fa-check-circle
+
+    -->
+
+            <div class="row justify-content-center">
+
+                <div class="col-12 col-md-4">
+                    <div class="my-card text-center">
+                        <h5>basic pass</h5>
+                        <p>$29</p>
+                        <span>per day</span>
+
+                        <ul class="list-unstyled">
+                            <li><i class="fal fa-check-circle"></i> Entrance</li>
+                            <li><i class="fal fa-check-circle"></i> Coffee Break</li>
+                            <li><i class="fal fa-check-circle"></i> Lunch on all days</li>
+                            <li><i class="fal fa-times"></i> Access to all areas</li>
+                            <li><i class="fal fa-times"></i> Certificate</li>
+                        </ul>
+                        
+                        <button class="btn main-btn">buy ticket</button>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <div class="my-card special text-center">
+                        <h5>standard pass</h5>
+                        <p>$40</p>
+                        <span>per day</span>
+
+                        <ul class="list-unstyled">
+                            <li><i class="fal fa-check-circle"></i> Entrance</li>
+                            <li><i class="fal fa-check-circle"></i> Coffee Break</li>
+                            <li><i class="fal fa-check-circle"></i> Lunch on all days</li>
+                            <li><i class="fal fa-times"></i> Access to all areas</li>
+                            <li><i class="fal fa-check-circle"></i> Certificate</li>
+                        </ul>
+                        
+                        <button class="btn main-btn">buy ticket</button>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <div class="my-card text-center">
+                        <h5>basic pass</h5>
+                        <p>$68</p>
+                        <span>per day</span>
+
+                        <ul class="list-unstyled">
+                            <li><i class="fal fa-check-circle"></i> Entrance</li>
+                            <li><i class="fal fa-check-circle"></i> Coffee Break</li>
+                            <li><i class="fal fa-times"></i> Lunch on all days</li>
+                            <li><i class="fal fa-check-circle"></i> Access to all areas</li>
+                            <li><i class="fal fa-check-circle"></i> Certificate</li>
+                        </ul>
+                        
+                        <button class="btn main-btn">buy ticket</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
 
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/fontawesome.js"></script>
