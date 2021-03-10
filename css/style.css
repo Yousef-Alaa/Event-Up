@@ -25,26 +25,23 @@ Main Rules
 }
 
 :root {
-    --y-color: #ff4d79;
+    --themeColor: #ff4d79;
     --mPad: 65px;
 }
 
-body {
-    font-family: sans-serif;
-    height: 10000px
-}
+body {font-family: sans-serif;}
 
 .main-btn {
     padding: 12px 40px;
-    background-color: var(--y-color);
+    background-color: var(--themeColor);
     border-radius: 25px;
     color: #FFF;
     text-transform: uppercase;
     font-weight: bold;
-    box-shadow: 0 0 10px var(--y-color);
+    box-shadow: 0 0 10px var(--themeColor);
 }
-.main-btn:hover {box-shadow: 0 0 10px 4px var(--y-color);color: #FFF}
-.main-btn:focus {box-shadow: 0 0 10px var(--y-color) !important}
+.main-btn:hover {box-shadow: 0 0 10px 4px var(--themeColor);color: #FFF}
+.main-btn:focus {box-shadow: 0 0 10px var(--themeColor) !important}
 
 .square-h {
     font-weight: bold;
@@ -56,14 +53,14 @@ body {
 
 .square-h:before {
     content: '[';
-    color: var(--y-color);
+    color: var(--themeColor);
     margin: 0 10px;
     font-size: calc(1.65rem + .9vw);
 }
 
 .square-h:after {
     content: ']';
-    color: var(--y-color);
+    color: var(--themeColor);
     margin: 0 10px;
     font-size: calc(1.65rem + .9vw);
 }
@@ -88,7 +85,7 @@ nav {
     width: 100%;
     left: 0;
     top: 0;
-    z-index: 10;
+    z-index: 7;
     transition: .5s ease;
 }
 nav.active {
@@ -104,11 +101,11 @@ nav.active {
     top: -85px;
 }
 
-nav .navbar-brand {color: var(--y-color);font-size: 28px;}
+nav .navbar-brand {color: var(--themeColor);font-size: 28px;}
 nav .navbar-brand .icon {font-size: 38px}
 nav .navbar-brand .word span {font-weight: bold}
 
-nav .navbar-toggler {border: 2px solid var(--y-color);padding: 16px 9px;}
+nav .navbar-toggler {border: 2px solid var(--themeColor);padding: 16px 9px;}
 
 nav .navbar-toggler:focus {box-shadow: none;}
 
@@ -120,13 +117,13 @@ nav .navbar-toggler .nav-icon {
     width: 26px;
     height: 3px;
     display: block;
-    background-color: var(--y-color);
+    background-color: var(--themeColor);
     position: relative;
     border-radius: 2px
 }
 nav .navbar-toggler .nav-icon:after {
     content: "";
-    background-color: var(--y-color);
+    background-color: var(--themeColor);
     height: 3px;
     display: block;
     width: 26px;
@@ -136,7 +133,7 @@ nav .navbar-toggler .nav-icon:after {
 }
 nav .navbar-toggler .nav-icon:before {
     content: "";
-    background-color: var(--y-color);
+    background-color: var(--themeColor);
     height: 3px;
     display: block;
     width: 26px;
@@ -150,7 +147,7 @@ nav .navbar-nav .nav-item:not(.active) {color: #FFF}
 nav.active .navbar-nav .nav-item:not(.active) {color: #777}
 
 nav .navbar-nav .nav-item:hover,
-nav .navbar-nav li.active {color: var(--y-color) !important;}
+nav .navbar-nav li.active {color: var(--themeColor) !important;}
 
 @media (min-width: 992px) {
     nav .navbar-nav .nav-item {margin-left: 13px}
@@ -160,13 +157,13 @@ nav .navbar-nav li.active {color: var(--y-color) !important;}
 
 @media (max-width: 991px) {
     nav .navbar-nav {background-color: #ECF0F1;padding: 12px 35px 0;}
-    nav .navbar-nav .nav-item:not(:last-of-type) {border-bottom: 1px solid var(--y-color)}
+    nav .navbar-nav .nav-item:not(:last-of-type) {border-bottom: 1px solid var(--themeColor)}
     nav .navbar-nav .nav-item:first-of-type {margin-top: 10px}
     nav .navbar-nav .nav-item {margin-bottom: 7px;padding-bottom: 6px;}
     nav .navbar-nav li.active {
         color: #ccc !important;
         -webkit-text-stroke-width: medium;
-        -webkit-text-stroke-color: var(--y-color);
+        -webkit-text-stroke-color: var(--themeColor);
     }
     nav .navbar-nav .nav-item:not(.active) {color: #777}
 }
@@ -189,7 +186,7 @@ header .overlay {
     align-items: center;
 }
 
-header .overlay i {display: block;font-size: 45px;color: var(--y-color);margin-bottom: 35px;}
+header .overlay i {display: block;font-size: 45px;color: var(--themeColor);margin-bottom: 35px;}
 header .overlay p:first-of-type {font-size: 18px;font-weight: bold;font-style: italic;margin-bottom: 23px;text-transform: capitalize}
 header .overlay h1 {font-weight: 700;font-size: 50px;text-transform: uppercase;}
 header .overlay p:last-of-type {width: 50%;margin: auto;}
@@ -200,7 +197,7 @@ header .count {
     height: 110px;
     padding: 0 90px;
     border-radius: 10px;
-    background-color: var(--y-color);
+    background-color: var(--themeColor);
     position: absolute;
     left: 15%;
     bottom: -55px;
@@ -266,7 +263,7 @@ header .count b {font-weight: bold;font-size: 22px;display: block;}
 .about h2 {font-size: 35px;font-weight: bold;text-transform: capitalize;color: #121212;}
 .about h2 + p {color: #909090;line-height: 1.5;font-size: 14px;}
 .about .marks p {color: #909090;margin-bottom: 9px;text-transform: capitalize;}
-.about .marks p span {color: var(--y-color);margin-right: 5px}
+.about .marks p span {color: var(--themeColor);margin-right: 5px}
 .about button {padding: 12px 24px;font-size: 15px;margin-top: 13px;}
 
 @media (max-width: 349px) {
@@ -295,7 +292,7 @@ header .count b {font-weight: bold;font-size: 22px;display: block;}
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--y-color);
+    background-color: var(--themeColor);
     opacity: .55;
     z-index: 2
 }
@@ -330,7 +327,7 @@ header .count b {font-weight: bold;font-size: 22px;display: block;}
 
 .why-join .box-abs section:first-of-type {margin-left: 10px;}
 .why-join .box-abs section i {
-    color: var(--y-color);
+    color: var(--themeColor);
     display: block;
     font-size: 30px;
     font-weight: bold;
@@ -383,7 +380,7 @@ header .count b {font-weight: bold;font-size: 22px;display: block;}
 .why-join .boxs .box h3 {font-weight: bold;text-transform: capitalize}
 .why-join .boxs .box .number {
     display: flex;
-    background-color: var(--y-color);
+    background-color: var(--themeColor);
     width: 100px;
     height: 100px;
     border-radius: 50%;
@@ -404,7 +401,7 @@ header .count b {font-weight: bold;font-size: 22px;display: block;}
     transition: .5s ease-in-out
 }
 
-.why-join .boxs .box div:hover .icon {color: var(--y-color)}
+.why-join .boxs .box div:hover .icon {color: var(--themeColor)}
 
 
 .count-to {background-image: url(../images/countdown.jpg);background-size: cover;height: 260px}
@@ -425,7 +422,7 @@ header .count b {font-weight: bold;font-size: 22px;display: block;}
 }
 .count-to .overlay section div .icon {
     position: absolute;
-    background-image: linear-gradient(0deg, #FF4D79 0, #FF809F 100%);
+    background-color: var(--themeColor);
     display: flex;
     width: 44px;
     height: 44px;
@@ -458,7 +455,7 @@ header .count b {font-weight: bold;font-size: 22px;display: block;}
     border-width: 15px;
     border-style: solid;
     border-color: transparent;
-    border-top-color: var(--y-color);
+    border-top-color: var(--themeColor);
     position: absolute;
     bottom: -29px;
     left: calc(50% - 15px);
@@ -468,12 +465,12 @@ header .count b {font-weight: bold;font-size: 22px;display: block;}
     padding: 20px;
     cursor: pointer;
     position: relative;
-    transition: 1s ease-in-out;
+    transition: .5s ease-in-out;
     box-shadow: 0 10px 30px #e2e8ed;
     border-radius: 5px;
 }
 .schedules .events .active article,
-.schedules .events .toggle article:hover {background-image: linear-gradient(65deg, #FF4D79 0, #FF809F 100%);color: #FFF;}
+.schedules .events .toggle article:hover {background-color: var(--themeColor)}
 
 .schedules .events .toggle article h5 {color: #2f323c;text-transform: uppercase;font-weight: bold;}
 .schedules .events .toggle article:hover h5,
@@ -498,7 +495,7 @@ header .count b {font-weight: bold;font-size: 22px;display: block;}
 .schedules .my-accordion article .side1 {
     float: left;
     width: 22%;
-    background: linear-gradient(65deg, #FF4D79 0, #FF809F 100%);
+    background-color: var(--themeColor);
     padding: 35px 0 35px 24px;
     font-size: 19px;
     font-weight: bold;
@@ -537,7 +534,7 @@ header .count b {font-weight: bold;font-size: 22px;display: block;}
 
 .schedules .my-accordion article section p:first-of-type {font-size: 14px;line-height: 1.9;color: #212121}
 .schedules .my-accordion article section p:last-of-type {color: #777;font-size: 14px;}
-.schedules .my-accordion article section p span {color: var(--y-color);}
+.schedules .my-accordion article section p span {color: var(--themeColor);}
 
 @media (max-width: 991px) {
     .schedules .events .toggle-box {width: 24%;}
@@ -650,7 +647,7 @@ header .count b {font-weight: bold;font-size: 22px;display: block;}
     cursor: pointer;
 }
 
-.our-speakers .img-box h5:hover {color: var(--y-color);opacity: 1;}
+.our-speakers .img-box h5:hover {color: var(--themeColor);opacity: 1;}
 
 .our-speakers .img-box p {
     text-align: center;
@@ -683,7 +680,7 @@ header .count b {font-weight: bold;font-size: 22px;display: block;}
 
 .event-gallery .img-box .overlay {
     position: absolute;
-    background-color: var(--y-color);
+    background-color: var(--themeColor);
     top: 0;
     left: 0;
     width: 100%;
@@ -696,7 +693,7 @@ header .count b {font-weight: bold;font-size: 22px;display: block;}
 
 .event-gallery .img-box .icon {
     position: absolute;
-    color: var(--y-color);
+    color: var(--themeColor);
     background-color: #FFF;
     border-radius: 50%;
     font-size: 28px;
@@ -744,7 +741,7 @@ header .count b {font-weight: bold;font-size: 22px;display: block;}
     font-weight: bold;
 }
 .coming-events .overlay a,
-.coming-events .overlay a:hover {color: var(--y-color);cursor: pointer;}
+.coming-events .overlay a:hover {color: var(--themeColor);cursor: pointer;}
 
 .coming-events button {
     padding: 10.5px 22px;
@@ -776,7 +773,7 @@ header .count b {font-weight: bold;font-size: 22px;display: block;}
 .ticket-pricing .my-card p {
     font-size: 37px;
     font-weight: 700;
-    color: var(--y-color);
+    color: var(--themeColor);
     margin: 18px 0 0;
 }
 
@@ -794,7 +791,7 @@ header .count b {font-weight: bold;font-size: 22px;display: block;}
 }
 
 .ticket-pricing .my-card ul li i {
-    color: var(--y-color);
+    color: var(--themeColor);
     padding-right: 4px;
 }
 
@@ -805,7 +802,7 @@ header .count b {font-weight: bold;font-size: 22px;display: block;}
 }
 
 
-.ticket-pricing .my-card.special {background-color: var(--y-color);}
+.ticket-pricing .my-card.special {background-color: var(--themeColor);}
 
 .ticket-pricing .my-card.special h5,
 .ticket-pricing .my-card.special p,
@@ -818,14 +815,240 @@ header .count b {font-weight: bold;font-size: 22px;display: block;}
 
 /* End Upcoming Events */
 
+/* Start Latest News */
+.latest-news {padding-top: var(--mPad);padding-bottom: var(--mPad);}
+.latest-news .content {border-radius: 5px;position: relative;overflow: hidden;box-shadow: 0 8px 24px #e2e8ed;}
+.latest-news .content .image {overflow: hidden;}
+.latest-news .content .image img {transition: .5s ease-in-out;}
+.latest-news .content .image img:hover {transform: scale(1.2);}
+
+.latest-news .content .icon {
+    background-color: var(--themeColor);
+    color: #FFF;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: calc(50% - 27.5px);
+}
+.latest-news .content .icon i {font-size: 25px;}
+
+.latest-news .content h4 {
+    margin-top: 40px;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 22px;
+    color: #212121;
+    cursor: pointer;
+}
+
+.latest-news .content h4:hover {color: var(--themeColor)}
+
+.latest-news .content p {
+    color: #212121;
+    width: 85%;
+    font-size: 14px;
+    margin: auto;
+    line-height: 1.7;
+}
+.latest-news .content .under-box {
+    background: #f5f6f6;
+    padding: 10px;
+    margin-top: 27px;
+}
+
+.latest-news .content .under-box p {overflow: hidden;color: #999;}
+.latest-news .content .under-box p span:last-of-type {float: right;}
+.latest-news .content .under-box p span i {color: var(--themeColor);padding-right: 4px;}
+
+.latest-news button {
+    margin: 40px auto 0;
+    display: block;
+    padding: 10.5px 24px;
+    font-size: 14px;
+}
+
+/* End Latest News */
+
+/* Start Sponsors */
+
+.sponsors {
+    padding-top: var(--mPad);
+    padding-bottom: calc(var(--mPad) - 50px);
+    position: relative;
+    background-image: url(../images/countdown.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+.sponsors .container {position: relative;z-index: 1;}
+.sponsors .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .8);
+    z-index: 0;
+}
+.sponsors h2 {color: #FFF;}
+.sponsors p {
+    color: #FFF;
+    font-size: 15px;
+    width: 100%;
+    margin: 25px 0 65px;
+}
+
+.sponsors .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.sponsors .content img {width: calc(70% / 5);margin-bottom: 50px;}
+.sponsors .content img:not(:first-of-type) {margin-left: 6%;}
+
+/* End Sponsors */
+
+/* Start Contact Us */
+
+.contact {padding-top: var(--mPad);padding-bottom: var(--mPad);}
+.contact form {
+    box-shadow: 0 8px 24px #e2e8ed;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 60px 100px;
+}
+
+.contact form .input {
+    width: 45%;
+    margin-bottom: 35px;
+}
+
+.contact form input {
+    color: #848484;
+    background: #f7f7f7;
+    display: block;
+    width: 100%;
+    border: 0;
+    padding: 10px 10px 10px 24px;
+    border-radius: 24px;
+    font-size: 15px;
+    border: 1px solid #FFF;
+}
+
+.contact form input:focus,
+.contact form textarea:focus {
+    outline: none;
+    border-color: var(--themeColor);
+}
+
+.contact form .sub {width: 100%;}
+.contact form textarea {
+    width: 100%;
+    resize: none;
+    border: none;
+    background-color: #f7f7f7;
+    border-radius: 5px;
+    height: 120px;
+    padding: 10px 10px 10px 24px;
+    margin-bottom: 40px;
+    border: 1px solid #FFF;
+}
+
+.contact form button {width: 100%;}
+
+/* End Contact Us */
+
+/* Start Map */
+.map.container {padding: 0;}
+/* End Map */
+
+/* Start Footer */
+
+footer {background-color: #161e26;padding-top: var(--mPad);padding-bottom: 30px;}
+
+footer h2 {color: #FFF;text-transform: capitalize;}
+footer .input {
+    width: 60%;
+    margin: 50px auto 25px;
+    position: relative;
+    overflow: hidden;
+}
+
+footer .input input {
+    height: 50px;
+    width: calc(100% - 156.23px);
+    border-radius: 25px;
+    border: 0;
+    float: left;
+    padding-left: 17px;
+    background: #252d37;
+    color: #FFF;
+}
+
+footer .input input:focus {outline: none;}
+
+footer .input button {
+    position: absolute;
+    z-index: 1;
+    right: 22px;
+    box-shadow: none;
+}
+
+footer .input button:hover {box-shadow: none;}
+
+footer .logo {color: var(--themeColor);font-size: 28px;}
+footer .logo .icon {font-size: 38px}
+footer .logo .word span {font-weight: bold}
+
+footer .social {margin: 20px 0 35px;}
+footer .social span {
+    color: #888;
+    border: 1px solid #888;
+    border-radius: 3px;
+    padding: 3px;
+    width: 38px;
+    display: inline-block;
+    font-size: 20px;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+
+footer .social span:not(:first-of-type) {margin-left: 5px;}
+
+footer .social span:first-of-type:hover {border-color: #4867aa;color: #4867aa;}
+footer .social span:nth-of-type(2):hover {border-color: #1da1f2;color: #1da1f2;}
+footer .social span:nth-of-type(3):hover {border-color: #bd081c;color: #bd081c;}
+
+footer .copy {color: #9e9e9e;text-transform: capitalize;letter-spacing: 1.2px;}
+footer .copy span {color: var(--themeColor)}
 
 
+/* End Footer */
 
+/* Start Scroll To Top */
+.top-btn {
+    position: fixed;
+    bottom: -45px;
+    right: 25px;
+    z-index: 9;
+    transition: .5s ease-in-out;
+    border: 1px solid var(--themeColor);
+    background-color: var(--themeColor);
+    color: #FFF;
+    font-size: 16px;
+    cursor: pointer;
+}
 
+.top-btn:hover {
+    background-color: #FFF;
+    color: var(--themeColor);
+}
 
+.top-btn:focus {outline: none;box-shadow: none;}
 
-
-
-
-
-
+/* End Scroll To Top */

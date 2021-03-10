@@ -6,8 +6,24 @@ $(document).ready(() => {
     let win = $(window),
         
         nav = $('nav'),
+
+        themeColor = $('html').css('--themeColor'),
+
+        topBtn = $('.top-btn'),
         
         navItem = $('nav .navbar-nav .nav-item');
+
+    // Trigger Nice Scroll
+    $("body").niceScroll({
+        cursorcolor: themeColor,
+        cursorwidth: "13px",
+        cursorborder: "none",
+        cursorborderradius: "0",
+        zindex: '9',
+        cursorminheight: 70,
+        scrollspeed: 150,
+        smoothscroll: false
+    });
     
     
     // Window Scroll Functions
@@ -20,9 +36,16 @@ $(document).ready(() => {
         
         // Toggle Nav Style
         if (win.scrollTop() >= 100) {
-            nav.addClass('active')
+            nav.addClass('active');
         } else {
-            nav.removeClass('active')
+            nav.removeClass('active');
+        }
+
+        // Scroll Top Btn
+        if (win.scrollTop() >= 1000) {
+            topBtn.css('bottom', '20px');
+        } else {
+            topBtn.css('bottom', '-45px');
         }
         
         // Nav Links add/remove active for items
@@ -76,7 +99,7 @@ $(document).ready(() => {
     $('header .overlay .p-fit').fitText(1.1, { minFontSize: '10px', maxFontSize: '18px' })
     
     // Count Down Function
-    function countDown() {  
+    function countDown() {
         
         let days = 232,
             
@@ -128,7 +151,6 @@ $(document).ready(() => {
                 
                 min = 59;
                 hours = hours - 1;
-                showMin = min;
                 
             }
             
@@ -148,7 +170,7 @@ $(document).ready(() => {
     };
     
     countDown();
-    
+
     // Count Down Function
     function countUp() {
         
@@ -211,6 +233,11 @@ $(document).ready(() => {
         $(this).css('line-height', h + 'px');
 
     });
+
+    $('.latest-news .content .icon').each(function () {
+        $(this).css('top', $(this).prev().height() - 27.5);
+    });
+    
     
     const name = String.fromCharCode(89, 111, 117, 115, 101, 102);
     
