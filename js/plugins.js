@@ -9,6 +9,8 @@ $(document).ready(() => {
 
         themeColor = $('html').css('--themeColor'),
 
+        loader =  $('.loader'),
+
         topBtn = $('.top-btn'),
         
         navItem = $('nav .navbar-nav .nav-item');
@@ -24,6 +26,10 @@ $(document).ready(() => {
         scrollspeed: 150,
         smoothscroll: false
     });
+
+    setTimeout(() => {
+        loader.children().fadeOut(500, function () {loader.fadeOut(500)});
+    }, 3000);
     
     
     // Window Scroll Functions
@@ -85,6 +91,13 @@ $(document).ready(() => {
         }        
     });
     
+    // WOW.js
+    $('.wow').attr({
+        'data-wow-duration': '1s',
+        'data-wow-delay': '0s',
+        'data-wow-offset': "250"
+    });
+    
     // Trigger Headroom.js
     nav.headroom();
     
@@ -104,8 +117,12 @@ $(document).ready(() => {
         let days = 232,
             
             hours = 4,
+
+            showH = `0${hours}`,
             
             min = 22,
+
+            showMin,
             
             sec = 15,
             
@@ -120,7 +137,7 @@ $(document).ready(() => {
             daySp = $('#countDays');
         
         daySp.html(days);
-        hoursSp.html(hours);
+        hoursSp.html(showH);
         minSp.html(min);
         secSp.html(sec);
         
@@ -130,9 +147,8 @@ $(document).ready(() => {
             if (sec === 0) {
                 
                 sec = 59;
-                min = min - 1;
                 showSec = sec;
-                showMin = min;
+                min = min - 1;
                 
             } else if (sec <= 10) {
                 
@@ -151,19 +167,33 @@ $(document).ready(() => {
                 
                 min = 59;
                 hours = hours - 1;
+                showMin = min;
+
+            } else if (min < 10) {
                 
+                showMin = '0' + min;
+                
+            } else {
+                showMin = min;
             }
             
             
             if (hours === 0) {
                 hours = 23;
                 days = days - 1;
+                showH = hours;
+            } else if (hours < 10) {
+                
+                showH = '0' + hours;
+                
+            } else {
+                showH = hours;
             }
             
             
             daySp.html(days);
-            hoursSp.html(hours);
-            minSp.html(min);
+            hoursSp.html(showH);
+            minSp.html(showMin);
             secSp.html(showSec);
             
         }, 1000);
@@ -205,6 +235,12 @@ $(document).ready(() => {
         
     };
     
+//    $('.video .icon span i').on('click', function () {
+//        
+//        $(this).parents('.icon').siblings('video').play();
+//        
+//    });
+//    
 
     $('.schedules .events .toggle-box').on('click', function () {
         
@@ -234,10 +270,27 @@ $(document).ready(() => {
 
     });
 
+    $('.event-gallery .img-box .icon').on('click', function () {
+        
+        let tar = $(this).next().attr('src');
+
+        $('.gallery-slider img').attr('src', tar).parent().fadeIn(500).css('display', 'flex');
+    });
+    
+    $('.gallery-slider button').click(function () {$(this).parent().fadeOut(500)});
+    
     $('.latest-news .content .icon').each(function () {
         $(this).css('top', $(this).prev().height() - 27.5);
     });
     
+    // Form Validation
+    $('.contact form input').on('blur', function () {
+        if ($(this).val() == '') {
+            $(this).siblings('span').css('visibility', 'visible');
+        } else {
+            $(this).siblings('span').css('visibility', 'hidden');
+        }
+    });
     
     const name = String.fromCharCode(89, 111, 117, 115, 101, 102);
     
