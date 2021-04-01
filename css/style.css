@@ -45,6 +45,18 @@ Main Rules
 
 body {font-family: sans-serif;}
 
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--themeColor);
+}
+
 .main-btn {
     padding: 12px 40px;
     background-color: var(--themeColor);

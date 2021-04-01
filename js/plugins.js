@@ -15,17 +15,6 @@ $(document).ready(() => {
         
         navItem = $('nav .navbar-nav .nav-item');
 
-    // Trigger Nice Scroll
-    $("body").niceScroll({
-        cursorcolor: themeColor,
-        cursorwidth: "13px",
-        cursorborder: "none",
-        cursorborderradius: "0",
-        zindex: '9',
-        cursorminheight: 70,
-        scrollspeed: 150,
-        smoothscroll: false
-    });
 
     setTimeout(() => {
         loader.children().fadeOut(500, function () {loader.fadeOut(500)});
