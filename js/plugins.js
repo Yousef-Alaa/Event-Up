@@ -64,6 +64,13 @@ $(document).ready(() => {
         
     });
     
+    $("body").niceScroll({
+        cursorcolor: $(':root').css('--themeColor'),
+        cursorwidth: "16px",
+        cursorborderradius: "0",
+        zindex: 100
+    });
+    
     // Smooth Scroll
     $('[data-scroll]').on('click', function () {
         
@@ -222,14 +229,7 @@ $(document).ready(() => {
         }
         
         
-    };
-    
-//    $('.video .icon span i').on('click', function () {
-//        
-//        $(this).parents('.icon').siblings('video').play();
-//        
-//    });
-//    
+    };  
 
     $('.schedules .events .toggle-box').on('click', function () {
         
@@ -269,7 +269,8 @@ $(document).ready(() => {
     $('.gallery-slider button').click(function () {$(this).parent().fadeOut(500)});
     
     $('.latest-news .content .icon').each(function () {
-        $(this).css('top', $(this).prev().height() - 27.5);
+        let h = $(this).prev().height();
+        $(this).css('top', h - 27.5);
     });
     
     // Form Validation
