@@ -64,12 +64,12 @@ $(document).ready(() => {
         
     });
     
-    $("body").niceScroll({
+    /*$("body").niceScroll({
         cursorcolor: $(':root').css('--themeColor'),
         cursorwidth: "16px",
         cursorborderradius: "0",
         zindex: 100
-    });
+    });*/
     
     // Smooth Scroll
     $('[data-scroll]').on('click', function () {
