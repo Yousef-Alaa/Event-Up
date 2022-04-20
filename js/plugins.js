@@ -7,8 +7,6 @@ $(document).ready(() => {
         
         nav = $('nav'),
 
-        themeColor = $('html').css('--themeColor'),
-
         loader =  $('.loader'),
 
         topBtn = $('.top-btn'),
@@ -18,7 +16,7 @@ $(document).ready(() => {
 
     setTimeout(() => {
         loader.children().fadeOut(500, function () {loader.fadeOut(500)});
-    }, 3000);
+    }, 2500);
     
     
     // Window Scroll Functions
@@ -64,12 +62,6 @@ $(document).ready(() => {
         
     });
     
-    /*$("body").niceScroll({
-        cursorcolor: $(':root').css('--themeColor'),
-        cursorwidth: "16px",
-        cursorborderradius: "0",
-        zindex: 100
-    });*/
     
     // Smooth Scroll
     $('[data-scroll]').on('click', function () {
